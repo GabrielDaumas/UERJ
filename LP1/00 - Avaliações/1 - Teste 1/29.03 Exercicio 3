@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int nota,i;
+    int soma = 0,qtdaluno = 50,countacima = 0;
+    float media = 0;
+    char notas[qtdaluno];
+    for (i=0;i<qtdaluno;i++)
+    {
+         printf("Digite uma nota: ");
+         scanf("%d",&nota);
+         notas[i] = nota;
+         soma += notas[i];
+    }
+    media = soma/50.00;
+    printf("A média é: %f\n",media);
+    for (i=0;i<qtdaluno;i++)
+    {
+         nota = notas[i];
+         if(nota>media)
+         {
+              countacima++;
+         }
+    }
+    printf("Quantidade acima da média: %d\n",countacima);
+    return 0;
+}

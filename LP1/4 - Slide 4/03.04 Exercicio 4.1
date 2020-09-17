@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int ehprimo(int num)
+{
+   int count = 0;
+   for(int i = 1; i<=num;i++)
+   {
+      if(num % i == 0)
+      {
+         count++;
+      }
+   }
+   if(count == 2)
+   {
+      return 1;
+   }
+   else
+   {
+      return 0;
+   }
+}
+int main (void)
+{
+   int num;
+   printf("Digite um valor para saber se é primo: ");
+   scanf("%d",&num);
+   if(ehprimo(num) == 0)
+   {
+      printf("não é Primo!");
+   }
+   else
+   {
+      printf("É Primo!");
+   }
+   
+   return 0;
+}
